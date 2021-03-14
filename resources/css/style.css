@@ -10,24 +10,20 @@ h1 {
     font-size: 40px;
     top: 20px;
     position: relative;
-    left: 10px;
 }
 h2 {
     color: hsl(228, 12%, 44%);
     font-size: 33px;
     top: -100px;
     position: relative;
-    left: 10px;
 }
 h3 {
     font-size: 16px;
     position: relative;
     top: 0px;
     color: hsl(228, 12%, 44%);
-    left: 10px;
 }
 p {
-    right: 10px;
     position: relative;
 }
 .attribution { font-size: 11px; text-align: center; }
@@ -40,11 +36,14 @@ header {
     background-color: hsl(225, 100%, 98%);
     height: 280px;
 }
+hr {
+    display: none;
+}
 .color-toggle {
     float: right;
-    top: -100px;
+    top: -83px;
     position: relative;
-    width: 190px;
+    width: 180px;
     display: flex;
 }
 .header-wrapper {
@@ -57,12 +56,78 @@ header {
     font-weight: bold;
     font-size: 19px;
     flex: auto;
+    margin-top: auto;
+    margin-bottom: auto;
 }
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 70px;
+    height: 32px;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+  
+  .switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #3f95cd; /* For browsers that do not support gradients */
+    background-image: linear-gradient(to right, #3f95cd , #3ecc8e);
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 6px;
+    bottom: 3px;
+    background-color: #20222f;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: hsl(228, 12%, 44%);
+    background-image: none;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px hsl(228, 12%, 44%);
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(32px);
+    -ms-transform: translateX(32px);
+    transform: translateX(32px);
+    background-color: white;
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
 /* #endregion */
 /* #region Top KPIs*/
 .kpi-card {
     background: aquamarine;
-    height: 300px;
+    height: 250px;
     width: 300px;
     margin: 10px;
     border-radius: 8px;
@@ -84,6 +149,15 @@ header {
     margin-left: auto;
     margin-right: auto;
 }
+.overview-wrapper {
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    position: relative;
+    display: flex;
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+}
 .kpi-small {
     width: 300px;
     background-color: aquamarine;
@@ -92,8 +166,6 @@ header {
     border-radius: 5px;
 }
 .overview-kpis {
-    display: flex;
-    flex-wrap: wrap;
     align-content: space-evenly;
     width: 100%;
     position: relative;
@@ -101,5 +173,71 @@ header {
     margin-left: auto;
     margin-right: auto;
     top: -110px;
+}
+/* #endregion */
+/* #region Max width 1355px*/
+@media (max-width: 1355px) {
+    h1 {
+        margin-left: 20px;        
+    }
+    h3 {
+        margin-left: 20px;
+    }
+    h2 {
+        margin-left: 20px;
+    }
+    .color-toggle {
+        margin-right: 20px;
+    }
+}
+/* #endregion */
+/* #region Max width 700px*/
+@media (max-width: 700px) {
+    h1 {
+        margin-left: 20px; 
+        font-size: 30px;
+        transition: ease-in-out 0.5s;    
+        padding-right: 10px;   
+    }
+    .color-toggle {
+        top: 30px;
+        /* transition: ease-in-out 0.5s;  */
+        float: left;
+        width: 90%;
+        margin-left: 20px;
+    }
+    .kpi-wrapper {
+        top: -30px;
+        transition: ease-in-out 0.5s; 
+        }
+    hr {
+        display: block;
+        width: 90%;
+        top: 20px;
+        position: relative;
+    }
+    h3 {
+        top: 10px;
+        }
+    header {
+        background-color: white;
+        transition: ease-in-out 0.5s;
+    }
+    h2 {
+        top: -70px;
+    }
+    .overview-kpis {
+        top: -80px;
+    }
+}
+/* #endregion */
+/* #region Max width 640px*/
+@media (max-width: 640px){
+    .kpi-card {
+        width: 350px;
+        }
+    .kpi-small {
+        width: 350px;
+        }
 }
 /* #endregion */
