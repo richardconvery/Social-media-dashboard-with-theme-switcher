@@ -13,7 +13,7 @@ h1 {
 }
 h2 {
     color: hsl(228, 12%, 44%);
-    font-size: 33px;
+    font-size: 28px;
     top: -100px;
     position: relative;
 }
@@ -25,6 +25,7 @@ h3 {
 }
 p {
     position: relative;
+    color: hsl(228, 12%, 44%);
 }
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
@@ -66,6 +67,7 @@ hr {
     height: 32px;
     margin-top: auto;
     margin-bottom: auto;
+    transform: rotate(180deg);
   }
   
   .switch input { 
@@ -81,8 +83,8 @@ hr {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #3f95cd; /* For browsers that do not support gradients */
-    background-image: linear-gradient(to right, #3f95cd , #3ecc8e);
+    background-color: hsl(228, 12%, 44%);
+    background-image: none;
     -webkit-transition: .4s;
     transition: .4s;
   }
@@ -100,8 +102,9 @@ hr {
   }
   
   input:checked + .slider {
-    background-color: hsl(228, 12%, 44%);
-    background-image: none;
+
+    background-color: #3f95cd; /* For browsers that do not support gradients */
+    background-image: linear-gradient(to right, #3f95cd , #3ecc8e);
   }
   
   input:focus + .slider {
@@ -126,7 +129,7 @@ hr {
 /* #endregion */
 /* #region Top KPIs*/
 .kpi-card {
-    background: aquamarine;
+    background: #ebf1ff;
     height: 250px;
     width: 300px;
     margin: 10px;
@@ -141,6 +144,75 @@ hr {
     max-width: 1280px;
     margin-left: auto;
     margin-right: auto;
+}
+.card-top-facebook {
+    width: 300px;
+    height: 5px;
+    background-color: #168ff7;
+    border-radius: 8px 8px 0px 0px;
+}
+.card-top-twitter {
+    width: 300px;
+    height: 5px;
+    background-color: #1da1f3;
+    border-radius: 8px 8px 0px 0px;
+}
+.card-top-instagram {
+    width: 300px;
+    height: 5px;
+    background-color: #e74f98; /* For browsers that do not support gradients */
+    background-image: linear-gradient(to right, #ffbd67 , #e74f98);
+    border-radius: 8px 8px 0px 0px;
+}
+.card-top-youtube {
+    width: 300px;
+    height: 5px;
+    background-color: #c30028;
+    border-radius: 8px 8px 0px 0px;
+}
+.kpi-card-top {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    padding-top: 20px;
+}
+.icon {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.handle {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+img {
+    height: 25px;
+}
+.icon {
+    text-align: right;
+    padding-right: 10px;
+}
+.kpi {
+    text-align: center;
+    font-size: 65px;
+    font-weight: bold;
+}
+.unit-of-measure {
+    color: hsl(228, 12%, 44%);
+    font-weight: normal;
+    letter-spacing: 6px;
+    text-align: center;
+    top: -20px;
+    position: relative;
+    }
+.delta {
+    text-align: center;
+    }
+.up {
+    color: #10bf66;
+    font-weight: bold;
+    }
+.down {
+    color: red;
+    font-weight: bold;
 }
 /* #endregion */
 /* #region Overview*/
@@ -224,7 +296,9 @@ hr {
         transition: ease-in-out 0.5s;
     }
     h2 {
-        top: -70px;
+        top: 0px;
+        padding-bottom: 70px;
+        padding-left: 20px;
     }
     .overview-kpis {
         top: -80px;
@@ -239,5 +313,8 @@ hr {
     .kpi-small {
         width: 350px;
         }
+    .card-top-facebook {
+        width: 350px;
+    }
 }
 /* #endregion */

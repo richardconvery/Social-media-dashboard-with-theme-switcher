@@ -6,12 +6,12 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet"> 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="stylesheet" href="resources/css/style.css">
+  <link rel="stylesheet" href="resources/css/style.css" id="theme-link">
   
   <title>Social Media Dashboard</title>
 </head>
-<body>
-  <header>
+<body class="dark-theme || light-theme">
+  <header class="dark-theme || light-theme">
     <div class="header-wrapper">
       <div class="title-followers">
         <h1>Social Media Dashboard</h1>
@@ -21,17 +21,53 @@
       <div class="color-toggle">
         <p class="toggle">Dark Mode</p>
         <label class="switch">
-          <input type="checkbox" checked>
+          <input id="toggle" class="dark-mode" type="checkbox" unchecked>
           <span class="slider round"></span>
         </label>
       </div>
     </div>
   </header>
   <div class="kpi-wrapper">
-    <div class="kpi-card facebook">1987</div>
-    <div class="kpi-card twitter">1044</div>
-    <div class="kpi-card instagram">11k</div>
-    <div class="kpi-card youtube">8239</div>
+    <div class="kpi-card">
+      <div class="card-top-facebook"></div>
+      <div class="kpi-card-top">
+        <div class="icon"><img src="resources/images/icon-facebook.svg" alt="facebook"></div>
+        <div class="handle"><p>@nathanf</p></div>
+      </div>
+      <div class="kpi">1987</div>
+      <div><h4 class="unit-of-measure">FOLLOWERS</h4></div>
+      <div><p class="delta up">&#9652; 12 Today</p></div>
+    </div>
+    <div class="kpi-card">
+      <div class="card-top-twitter"></div>
+      <div class="kpi-card-top">
+        <div class="icon"><img src="resources/images/icon-twitter.svg" alt="twitter"></div>
+        <div class="handle"><p>@nathanf</p></div>
+      </div>
+      <div class="kpi">1044</div>
+      <div><h4 class="unit-of-measure">FOLLOWERS</h4></div>
+      <div><p class="delta up">&#9652; 99 Today</p></div>
+    </div>
+    <div class="kpi-card">
+      <div class="card-top-instagram"></div>
+      <div class="kpi-card-top">
+        <div class="icon"><img src="resources/images/icon-instagram.svg" alt="instagram"></div>
+        <div class="handle"><p>@realnathanf</p></div>
+      </div>
+      <div class="kpi">11k</div>
+      <div><h4 class="unit-of-measure">FOLLOWERS</h4></div>
+      <div><p class="delta up">&#9652; 1099 Today</p></div>
+    </div>
+    <div class="kpi-card">
+      <div class="card-top-youtube"></div>
+      <div class="kpi-card-top">
+        <div class="icon"><img src="resources/images/icon-youtube.svg" alt="youtube"></div>
+        <div class="handle"><p>Nathan F.</p></div>
+      </div>
+      <div class="kpi">8239</div>
+      <div><h4 class="unit-of-measure">SUBSCRIBERS</h4></div>
+      <div><p class="delta down">&#9662; 144 Today</p></div>
+    </div>
   </div>
   <div class="overview-header">
     <h2>Overview - today</h2>
@@ -119,4 +155,5 @@
     Coded by <a href="#">Richard Convery</a>.
   </div>
 </body>
+<script src="resources/js/darkmodetoggle.js"></script> 
 </html>
