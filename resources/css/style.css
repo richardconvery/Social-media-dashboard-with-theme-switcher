@@ -232,10 +232,13 @@ img {
 }
 .kpi-small {
     width: 300px;
-    background-color: aquamarine;
+    background: #ebf1ff;
     margin: 10px;
     height: 150px;
     border-radius: 5px;
+    display: grid;
+    grid-template-columns: 3fr 1.3fr;
+    grid-template-rows: 1fr 1fr;
 }
 .overview-kpis {
     align-content: space-evenly;
@@ -245,6 +248,29 @@ img {
     margin-left: auto;
     margin-right: auto;
     top: -110px;
+}
+.page-views {
+    padding-left: 40px;
+    color: hsl(228, 12%, 44%);
+    padding-top: 34px;
+    font-size: 16px;
+}
+.logo {
+    padding-top: 30px;
+    padding-left: 20px;
+    text-align: right;
+    padding-right: 30px;
+}
+.views {
+    padding-top: 5px;
+    padding-left: 40px;
+    font-size: 35px;
+    font-weight: bold;
+}
+.movement {
+    padding-top: 25px;
+    text-align: right;
+    padding-right: 30px;
 }
 /* #endregion */
 /* #region Max width 1355px*/
@@ -267,7 +293,7 @@ img {
 @media (max-width: 700px) {
     h1 {
         margin-left: 20px; 
-        font-size: 30px;
+        font-size: 29px;
         transition: ease-in-out 0.5s;    
         padding-right: 10px;   
     }
@@ -314,6 +340,15 @@ img {
         width: 350px;
         }
     .card-top-facebook {
+        width: 350px;
+    }
+    .card-top-twitter {
+        width: 350px;
+    }
+    .card-top-instagram {
+        width: 350px;
+    }
+    .card-top-youtube {
         width: 350px;
     }
 }
