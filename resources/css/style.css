@@ -353,3 +353,42 @@ img {
     }
 }
 /* #endregion */
+/* #region Dark Mode settings*/
+/* header {
+    background-color: #20222f;
+    }
+    html, body {
+    background-color: #1d2029;
+    }
+    h1 {
+    color: white;
+    }
+    h2 {
+
+    color: white;
+    }
+    .kpi-card {
+    background: #252b43;
+    }
+    .kpi-small {
+    background: #252b43;
+    }
+    .kpi {
+    color: white;
+    }
+    .views {
+    color: white;
+    }
+    p {
+    color: hsl(229.1, 25.6%, 66.3%);
+    }
+    .unit-of-measure {
+    color: hsl(229.1, 25.6%, 66.3%);
+    }
+    .page-views {
+    color: hsl(229.1, 25.6%, 66.3%);
+    }
+    .attribution {
+    color: white;
+    } */
+    /* #endregion */
